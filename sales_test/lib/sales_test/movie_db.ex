@@ -116,7 +116,7 @@ defmodule SalesTest.Movie_db do
 
               full_join: r in "ratings",
               on: c.title_id == r.title_id,
-              order_by: [asc: r.weighted_average_vote], # or sorted_by r.weighted_average_vote or sorted_by c.date_published],
+              order_by: [asc: r.weighted_average_vote ], # or sorted_by r.weighted_average_vote or sorted_by c.date_published],
               select: %{
                     title: c.title,
                     year: c.year,
@@ -132,7 +132,6 @@ defmodule SalesTest.Movie_db do
           "year" ->
                 query =
                 from(c in "movies",
-
                 full_join: r in "ratings",
                 on: c.title_id == r.title_id,
                 order_by: [asc: c.year], # or sorted_by r.weighted_average_vote or sorted_by c.date_published],
