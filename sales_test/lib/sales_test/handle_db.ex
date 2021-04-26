@@ -11,8 +11,8 @@ defmodule SalesTest.HandleDb do
   # alias InpowerComment.Media
   # #new changing
 
-  def get_allmovie(page_no) do
-    Movie_db.get_all_movie(page_no)
+  def get_allmovie(page_no, title) do
+    Movie_db.get_all_movie(page_no, title)
   end
 
 
